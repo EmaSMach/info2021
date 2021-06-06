@@ -17,10 +17,12 @@ public class Ejer2 {
     public static int[] askNums() {
         int[] nums = new int[2];
         Scanner scanner = new Scanner(System.in);
+        System.out.print("1st number: ");
+        nums[0] = scanner.nextInt();
+        System.out.print("2nd number: ");
+        nums[1] = scanner.nextInt();
         scanner.close();
-        nums[0] = 8;
-        nums[1] = 4;
-        System.out.println(Arrays.toString(nums));
+        // System.out.println(Arrays.toString(nums));
         return nums;
     }
 
