@@ -7,7 +7,7 @@ public class Ejer4 {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         int num = scanner.nextInt();
-        System.out.printf("Factorial de %d: %d", num, factorial(num));
+        System.out.printf("El factorial de %d es: %d", num, factorial(num));
         System.out.println();
         scanner.close();
     }
