@@ -1,7 +1,5 @@
 package ejercicios.level1;
 
-// import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ejer2 {
@@ -22,7 +20,6 @@ public class Ejer2 {
         System.out.print("2nd number: ");
         nums[1] = scanner.nextInt();
         scanner.close();
-        // System.out.println(Arrays.toString(nums));
         return nums;
     }
 
