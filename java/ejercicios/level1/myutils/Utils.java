@@ -1,10 +1,15 @@
 package ejercicios.level1.myutils;
 
+import java.nio.charset.Charset;
 import java.util.Scanner;
 
 public class Utils {
 
-    public static final Scanner scanner = new Scanner(System.in);
+    public static Scanner scanner = new Scanner(System.in, Charset.forName("UTF-8"));
+    // public static Locale loc = new Locale("es", "ES");
+    // public static final BufferedReader bReader = new BufferedReader(new InputStreamReader(System.in));
+    // public static final Input
+    
 
     public static int addTwonums(int a, int b){
         return a + b;
@@ -27,9 +32,32 @@ public class Utils {
 
     public static String askForStr(String message){
         System.out.print(message);
-        String string = scanner.nextLine();
+        String string;
+        string = scanner.nextLine();
         return string;
+        
+        // if (scanner.hasNextLine()){
+        //     string = scanner.nextLine();
+        //     return string;
+        // } else {
+        //     string = scanner.next();
+        //     return string;
+        // }
+        
     }
+
+    // public static String askForStr2(String message){
+    //     System.out.print(message);
+    //     String string = bReader.
+        // try {
+        //     String string = bReader.readLine();
+        //     return string;
+        // } catch (IOException e) {
+        //     System.out.println("Nada");
+        //     return "";
+        // }
+        
+
 
     public static void closeScanner(){
         scanner.close();
