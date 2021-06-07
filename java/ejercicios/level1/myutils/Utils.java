@@ -24,6 +24,12 @@ public class Utils {
         return num;
     }
 
+    public static String askForStr(String message){
+        System.out.print(message);
+        String string = scanner.nextLine();
+        return string;
+    }
+
     public static void closeScanner(){
         scanner.close();
     }
