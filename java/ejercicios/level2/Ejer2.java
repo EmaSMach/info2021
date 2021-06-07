@@ -15,6 +15,7 @@ public class Ejer2 {
         int sizeBefore = array.size();
         array.add(0, 999);
         array.add(array.size(), 555);
+        
         System.out.printf("Tamano antes de insertar: %d", sizeBefore);
         System.out.println();
         System.out.printf("Tamano luego de insertar: %d", array.size());
