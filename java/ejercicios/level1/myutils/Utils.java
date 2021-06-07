@@ -21,6 +21,7 @@ public class Utils {
     public static int askForInt(String message){
         System.out.print(message);
         int num = scanner.nextInt();
+        scanner.nextLine(); //check
         return num;
     }
 
