@@ -60,4 +60,24 @@ class EmployeeManager {
             .forEach((emp) -> matchingEmployees.add(emp));
         return matchingEmployees;
     }
+
+    public Employee getYoungestEmployee() {
+        Collections.sort(employees, new Comparator<Employee>() {
+            @Override
+            public int compare(Employee emp1, Employee emp2) {
+                return emp1.getAge().compareTo(emp2.getAge());
+            }
+        });
+        return employees.get(0);
+    }
+    
+    public Employee getOldestEmployee() {
+        Collections.sort(employees, new Comparator<Employee>() {
+            @Override
+            public int compare(Employee emp1, Employee emp2) {
+                return emp1.getAge().compareTo(emp2.getAge());
+            }
+        });
+        return employees.get(employees.size() - 1);
+    }
 }

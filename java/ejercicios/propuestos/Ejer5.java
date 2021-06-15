@@ -16,6 +16,8 @@ public class Ejer5 {
         System.out.println(empMan.getLowestPaidEmployee());
         System.out.println(empMan.getHighestPaidEmployee());
         System.out.println(empMan.getEmployeesWithLastNameStartingWith("s"));
+        System.out.println(empMan.getYoungestEmployee());
+        System.out.println(empMan.getOldestEmployee());
     }
 }
 

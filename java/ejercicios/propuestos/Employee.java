@@ -60,7 +60,7 @@ public class Employee {
     }
 
     // age
-    public int getAge() {
+    public Integer getAge() {
         return getFullAge().getYears();
     }
 
