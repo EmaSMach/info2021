@@ -2,6 +2,7 @@ package ejercicios.propuestos;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.time.Period;
 import java.util.Arrays;
 import java.util.List;
 
@@ -56,6 +57,16 @@ public class Employee {
     
     public void setBirthDate(String birthDate) {
         this.birthDate = Utils.stringToLocalDate(birthDate);
+    }
+
+    // age
+    public int getAge() {
+        return getFullAge().getYears();
+    }
+
+    public Period getFullAge() {
+        Period date = Period.between(birthDate, LocalDate.now());
+        return date;
     }
 
     public BigDecimal getSalary() {
