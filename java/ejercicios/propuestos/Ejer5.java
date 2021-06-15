@@ -11,8 +11,8 @@ public class Ejer5 {
         empMan.loadEmployeesFromFile("\\java\\ejercicios\\propuestos\\empleados.txt");
         // "E:\\usuarios\\alumno\\Escritorio\\info2021\\java\\ejercicios\\propuestos\\empleados.txt"
         List<Employee> allEmployees = empMan.getEmployees();
-        System.out.println(allEmployees.get(0).getAge());
         System.out.println(allEmployees);
+        System.out.println(allEmployees.get(0).getAge());
         System.out.println(empMan.getLowestPaidEmployee());
         System.out.println(empMan.getHighestPaidEmployee());
         System.out.println(empMan.getEmployeesWithLastNameStartingWith("s"));

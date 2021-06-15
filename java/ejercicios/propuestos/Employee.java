@@ -65,8 +65,7 @@ public class Employee {
     }
 
     public Period getFullAge() {
-        Period date = Period.between(birthDate, LocalDate.now());
-        return date;
+        return Period.between(birthDate, LocalDate.now());
     }
 
     public BigDecimal getSalary() {
@@ -90,8 +89,6 @@ public class Employee {
     public static Employee fromStringLine(String line) {
         List<String> fields = Arrays.asList(line.split(","));
         Employee emp = new Employee(fields.get(0), fields.get(1), fields.get(2), fields.get(3));
-        System.out.print("EMP: ");
-        System.out.println(emp);
         return emp;
     }
 }

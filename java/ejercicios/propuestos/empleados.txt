@@ -1,4 +1,10 @@
 David Emanuel,Sandoval,03-07-1988,32000
 Lucas Antonio,Sandoval,14-04-1995,100.5
 Juan,Sánchez,02-12-1990,2
-Daniel,Villalba,02-12-1932,29
+Lorena,Ayala,05-05-1920,2952
+Daniel,Villalba,02-12-1932,2412
+Jorge,Barrios,15-07-1965,22000
+Andrés,Villa,29-10-1997,8000
+Joel,Sanabria,02-04-2001,2
+Mario Rolando,Rancagua,22-01-2010,0.007
+Pedro,Lorenzetti,25-11-1995,55555
