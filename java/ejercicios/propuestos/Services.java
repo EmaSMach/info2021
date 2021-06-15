@@ -1,10 +1,11 @@
 package ejercicios.propuestos;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 
@@ -13,12 +14,8 @@ class EmployeeManager {
 
     public EmployeeManager() {}
 
-    public static List<Employee> getEmployees() {
+    public List<Employee> getEmployees() {
         return employees;
-    }
-
-    public List<Employee> getAllEmployees() {
-        return null;
     }
 
     public void loadEmployeesFromFile(String relPath) {
@@ -34,56 +31,33 @@ class EmployeeManager {
             System.out.println(e.getMessage());
         }
     }
-}
 
-
-
-
-class MyFileReader {
-    // private String filePath;
-    public BufferedReader br;
-
-    MyFileReader(String filePath) {
-        try {
-            String absPath = System.getProperty("user.dir").concat(filePath);
-            // System.out.println(absPath);
-            // System.out.println(filePath);
-            this.br = new BufferedReader(new FileReader(absPath));
-        } catch (FileNotFoundException e) {
-            System.out.println(e.getMessage());
-            System.exit(1);
-        }   
-    }
-
-    public String getLine() {
-        try {
-            String line = br.readLine();
-            if (line != null) {
-                return line;
-            } else {
-                return null;
+    public Employee getLowestPaidEmployee() {
+        Collections.sort(employees, new Comparator<Employee>() {
+            @Override
+            public int compare(Employee emp1, Employee emp2) {
+                return emp1.getSalary().compareTo(emp2.getSalary());
             }
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-            return null;
-        }
+        });
+        return employees.get(0);
     }
 
-    public void close() {
-        try {
-            br.close();
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        }
+    public Employee getHighestPaidEmployee() {
+        Collections.sort(employees, new Comparator<Employee>() {
+            @Override
+            public int compare(Employee emp1, Employee emp2) {
+                return emp1.getSalary().compareTo(emp2.getSalary());
+            }
+        });
+        return employees.get(employees.size() - 1);
     }
 
-    public List<String> getLines() {
-        List<String> lines = new ArrayList<>();
-        String line = this.getLine();
-        while (line != null) {
-            lines.add(line);
-        }
-        System.out.println(lines);
-        return lines;
+    public List<Employee> getEmployeesWithLastNameStartingWith(String pattern) {
+        List<Employee> matchingEmployees = new ArrayList<>();
+        employees.stream()
+            .filter(emp -> emp.getLastName().toLowerCase()
+            .startsWith(pattern.toLowerCase()))
+            .forEach((emp) -> matchingEmployees.add(emp));
+        return matchingEmployees;
     }
 }

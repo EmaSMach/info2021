@@ -1,3 +1,4 @@
 David Emanuel,Sandoval,03-07-1988,32000
 Lucas Antonio,Sandoval,14-04-1995,100.5
-Juan,Sánchez,02-12-1990,20000.05
+Juan,Sánchez,02-12-1990,2
+Daniel,Villalba,02-12-1932,29

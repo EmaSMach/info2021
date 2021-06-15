@@ -10,11 +10,11 @@ public class Ejer5 {
         EmployeeManager empMan = new EmployeeManager();
         empMan.loadEmployeesFromFile("\\java\\ejercicios\\propuestos\\empleados.txt");
         // "E:\\usuarios\\alumno\\Escritorio\\info2021\\java\\ejercicios\\propuestos\\empleados.txt"
-        System.out.println(empMan.getAllEmployees());
-    }
-
-    public static List<Employee> getEmployees() {
-        return null;
+        List<Employee> todo = empMan.getEmployees();
+        System.out.println(todo);
+        System.out.println(empMan.getLowestPaidEmployee());
+        System.out.println(empMan.getHighestPaidEmployee());
+        System.out.println(empMan.getEmployeesWithLastNameStartingWith("s"));
     }
 }
 
